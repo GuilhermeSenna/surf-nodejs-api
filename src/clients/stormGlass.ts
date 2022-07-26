@@ -42,7 +42,7 @@ export class StormGlass {
             `https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lng}&params=${this.stormGlassAPIParams}&source=${this.stormGlassAPISource}`,
             {
                 headers: {
-                    Authorization: process.env.STORMGLASSTOKEN as string,
+                    Authorization: process.env.STORMGLASSTOKEN ?? '',
                 },
             }
         );
